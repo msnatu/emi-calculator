@@ -1,0 +1,47 @@
+.home-loan-calc-widget-container {
+  /*background: #09d3ac;*/
+  padding-right: 4em;
+}
+
+.home-loan-summary-container {
+  font-family: 'Titillium Web', 'Roboto', 'sans-serif';
+}
+
+.loan-summary {
+  font-size: 1em;
+  margin: 2em auto;
+  padding: 1em 2em;
+  border: 1px dashed #ccc;
+}
+
+.loan-slider {
+  color: #f00;
+}
+
+.loan-summary .MuiGrid-item {
+  padding: 0.5em 0;
+}
+
+.loan-summary .total-payment {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.home-loan-text-box {
+  width: 275px;
+  margin-bottom: 1em;
+}
+
+.home-loan-divider {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 1px;
+}
+
+.emi-table-year-row {
+  background: #eee;
+}
+
+.emi-table-year-row-odd {
+  background: #fff;
+}
