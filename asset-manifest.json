@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/emi-calculator/static/css/main.2a5fde79.chunk.css",
+    "main.js": "/emi-calculator/static/js/main.78be0dce.chunk.js",
+    "main.js.map": "/emi-calculator/static/js/main.78be0dce.chunk.js.map",
+    "runtime-main.js": "/emi-calculator/static/js/runtime-main.c8554ce2.js",
+    "runtime-main.js.map": "/emi-calculator/static/js/runtime-main.c8554ce2.js.map",
+    "static/js/2.888ba587.chunk.js": "/emi-calculator/static/js/2.888ba587.chunk.js",
+    "static/js/2.888ba587.chunk.js.map": "/emi-calculator/static/js/2.888ba587.chunk.js.map",
+    "index.html": "/emi-calculator/index.html",
+    "precache-manifest.8742f8c40d6a88abe2b8e0c80a84a826.js": "/emi-calculator/precache-manifest.8742f8c40d6a88abe2b8e0c80a84a826.js",
+    "service-worker.js": "/emi-calculator/service-worker.js",
+    "static/css/main.2a5fde79.chunk.css.map": "/emi-calculator/static/css/main.2a5fde79.chunk.css.map",
+    "static/js/2.888ba587.chunk.js.LICENSE.txt": "/emi-calculator/static/js/2.888ba587.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8554ce2.js",
+    "static/js/2.888ba587.chunk.js",
+    "static/css/main.2a5fde79.chunk.css",
+    "static/js/main.78be0dce.chunk.js"
+  ]
+}
