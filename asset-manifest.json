@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/emi-calculator/static/css/main.2a5fde79.chunk.css",
-    "main.js": "/emi-calculator/static/js/main.cfe2bada.chunk.js",
-    "main.js.map": "/emi-calculator/static/js/main.cfe2bada.chunk.js.map",
+    "main.js": "/emi-calculator/static/js/main.858d0f18.chunk.js",
+    "main.js.map": "/emi-calculator/static/js/main.858d0f18.chunk.js.map",
     "runtime-main.js": "/emi-calculator/static/js/runtime-main.e79d4d45.js",
     "runtime-main.js.map": "/emi-calculator/static/js/runtime-main.e79d4d45.js.map",
-    "static/js/2.db09491b.chunk.js": "/emi-calculator/static/js/2.db09491b.chunk.js",
-    "static/js/2.db09491b.chunk.js.map": "/emi-calculator/static/js/2.db09491b.chunk.js.map",
+    "static/js/2.936f003a.chunk.js": "/emi-calculator/static/js/2.936f003a.chunk.js",
+    "static/js/2.936f003a.chunk.js.map": "/emi-calculator/static/js/2.936f003a.chunk.js.map",
     "index.html": "/emi-calculator/index.html",
-    "precache-manifest.112fb8f538ef596380da5c0380d9188c.js": "/emi-calculator/precache-manifest.112fb8f538ef596380da5c0380d9188c.js",
+    "precache-manifest.52a68f53bf3f95ff3e01ba1bad4f42cb.js": "/emi-calculator/precache-manifest.52a68f53bf3f95ff3e01ba1bad4f42cb.js",
     "service-worker.js": "/emi-calculator/service-worker.js",
     "static/css/main.2a5fde79.chunk.css.map": "/emi-calculator/static/css/main.2a5fde79.chunk.css.map",
-    "static/js/2.db09491b.chunk.js.LICENSE.txt": "/emi-calculator/static/js/2.db09491b.chunk.js.LICENSE.txt"
+    "static/js/2.936f003a.chunk.js.LICENSE.txt": "/emi-calculator/static/js/2.936f003a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e79d4d45.js",
-    "static/js/2.db09491b.chunk.js",
+    "static/js/2.936f003a.chunk.js",
     "static/css/main.2a5fde79.chunk.css",
-    "static/js/main.cfe2bada.chunk.js"
+    "static/js/main.858d0f18.chunk.js"
   ]
 }
