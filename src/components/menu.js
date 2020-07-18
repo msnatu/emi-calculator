@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Home from "./home";
 import Car from "./car";
+import Personal from "./personal";
 
 function TabPanel(props) {
   const {children, value, index, ...other} = props;
@@ -79,10 +80,7 @@ export default function TopMenu() {
         <Car/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
+        <Personal/>
       </TabPanel>
     </div>
   );

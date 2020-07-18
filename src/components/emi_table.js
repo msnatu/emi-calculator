@@ -29,7 +29,17 @@ class EmiTable extends PureComponent {
     this.createEMIEntries();
   }
 
+  formatCurrency(value) {
+    value = Math.trunc(value);
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 2
+    }).format(value).replace(/\D00$/, '');
+  }
+
   render() {
+    let self = this;
     const YearTableCell = withStyles((theme) => ({
       head: {
         backgroundColor: '#efbe00',
@@ -72,10 +82,10 @@ class EmiTable extends PureComponent {
               </IconButton>
             </YearTableCell>
             <YearTableCell component="th" scope="row">{row.year}</YearTableCell>
-            <YearTableCell align="right">{row.principal}</YearTableCell>
-            <YearTableCell align="right">{row.interest}</YearTableCell>
-            <YearTableCell align="right">{row.emi}</YearTableCell>
-            <YearTableCell align="right">{row.balance}</YearTableCell>
+            <YearTableCell align="right">{self.formatCurrency(row.principal)}</YearTableCell>
+            <YearTableCell align="right">{self.formatCurrency(row.interest)}</YearTableCell>
+            <YearTableCell align="right">{self.formatCurrency(row.emi)}</YearTableCell>
+            <YearTableCell align="right">{self.formatCurrency(row.balance)}</YearTableCell>
           </TableRow>
           <TableRow>
             <TableCell style={{paddingBottom: 0, paddingTop: 0}} colSpan={6}>
@@ -98,10 +108,10 @@ class EmiTable extends PureComponent {
                       {row.month_wise.map((month) => (
                         <TableRow key={month.month_name}>
                           <MonthTableCell align="center">{month.month_name}</MonthTableCell>
-                          <MonthTableCell align="right">{month.principal}</MonthTableCell>
-                          <MonthTableCell align="right">{month.interest}</MonthTableCell>
-                          <MonthTableCell align="right">{month.emi}</MonthTableCell>
-                          <MonthTableCell align="right">{month.balance}</MonthTableCell>
+                          <MonthTableCell align="right">{self.formatCurrency(month.principal)}</MonthTableCell>
+                          <MonthTableCell align="right">{self.formatCurrency(month.interest)}</MonthTableCell>
+                          <MonthTableCell align="right">{self.formatCurrency(month.emi)}</MonthTableCell>
+                          <MonthTableCell align="right">{self.formatCurrency(month.balance)}</MonthTableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -164,6 +174,7 @@ class EmiTable extends PureComponent {
     let year_counter = 0;
     let month_wise = [];
     this.emi_entries = [];
+    let yearly_values = null;
 
     for (let counter = 1; counter <= months; counter++) {
       let p = !balance ? this.props.principal : balance;
@@ -181,22 +192,27 @@ class EmiTable extends PureComponent {
       yearly_principal += parseInt(paid_principal);
       yearly_interest += paid_interest;
       yearly_emi += this.props.emi;
+      yearly_values = {
+        principal: parseInt(yearly_principal),
+        interest: parseInt(yearly_interest),
+        balance: counter === months ? 0 : Math.floor(balance),
+        emi: Math.round(yearly_emi),
+        year: current_year + year_counter,
+        month_wise: month_wise
+      };
 
       if (month_counter === 11) {
-        this.emi_entries.push({
-          principal: parseInt(yearly_principal),
-          interest: parseInt(yearly_interest),
-          balance: counter === months ? 0 : Math.floor(balance),
-          emi: Math.round(yearly_emi),
-          year: current_year + year_counter,
-          month_wise: month_wise
-        });
+        this.emi_entries.push(yearly_values);
         year_counter += 1;
         month_counter = 0;
         month_wise = [];
+        yearly_values = null;
       } else {
         month_counter += 1;
       }
+    }
+    if (yearly_values) {
+      this.emi_entries.push(yearly_values);
     }
   }
 }
